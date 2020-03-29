@@ -1,0 +1,27 @@
+.chat-main
+  .mein-header
+    .mein-header__left
+      test
+      .mein-header__left__group
+        menber: name
+    = link_to "#",class: "mein-header__edit-btn" do
+      Edit
+  .message
+    .main-message
+      .main-message__info
+        .main-message__user
+          masa
+        .main-message__info 
+          2020/03/27(Fri) 23:16:04
+      .main-message__txit
+        おはよう
+  .main-form
+    .main-form__box
+      .main-form__txit
+        type a message
+      %label{class: "input-box__image"}
+        = icon('far', 'image')
+        %input{type: "file", class: "input-box__image__file"}
+
+    .main-form__send
+      Send
