@@ -14,7 +14,7 @@
       display: flex;
       align-items: center;
       
-      .side-header__box {
+      &__box {
         height: 20px;
         width: 100%;
         font-weight: bold;
@@ -22,20 +22,21 @@
         display: flex;
         justify-content: space-between;
 
-        .side-header__user-name {
+        &__user-name {
+
         }
 
-        .side-header__icon {
+        &__icon {
           a {
-          color: #ffffff;
-          text-decoration: none;
+            color: #ffffff;
+            text-decoration: none;
           }
-          .side-header__icon__group {
+            &__group {
 
-          }
-          .side-header__icon__edit {
-            margin-left: 5px;
-          }
+            }
+            &__edit {
+              margin-left: 5px;
+            }
         }
       }
     }
@@ -104,17 +105,18 @@
 
       .main-message {
         padding-bottom: 46px;
-        &__info {
+
+        &__data {
           display: flex;
 
-          .main-message__user  {
+          &__user  {
             margin-bottom: 12px;
             font-size: 16px;
             color: #333333;
             font-weight: bold;
           }
 
-          .main-message__info {
+          &__info {
             margin-left: 10px;
             color: #999999;
             font-size: 12px;
@@ -136,14 +138,14 @@
       display: flex;
       justify-content: space-between;
 
-      .main-form__box {
+      &__box {
         background-color: #ffffff;
         width: 100%;
         display: flex;
         justify-content: space-between;
         position: relative;
 
-        .main-form__txit {
+        &__txit {
           padding: 0 40px 0 10px;
           height: 50px;
           width: 100%;
