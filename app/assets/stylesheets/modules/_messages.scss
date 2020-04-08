@@ -45,8 +45,8 @@
       width: 100%;
       padding: 20px;
       background-color: #2f3e51;
+
       .side-group {
-        height: 45px;
         width: 100%;
         padding-bottom: 40px;
 
@@ -54,10 +54,13 @@
           width: 100%;
           font-size: 15px;
           padding-bottom: 5px;
+          color: white;
         }
+
         &__txit {
           font-size: 11px;
-          }
+          color: white;
+        }
       }
     }
   }
@@ -130,42 +133,45 @@
         }
       }
     } 
-    .main-form {
+    .form {
       height: 90px;
       padding: 20px 40px;
       line-height: 50px;
       background-color: #d2d2d2;
-      display: flex;
-      justify-content: space-between;
+      position: relative;
 
-      &__box {
-        background-color: #ffffff;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
+      .main-form {
 
-        &__txit {
-          padding: 0 40px 0 10px;
-          height: 50px;
+        .new_message {
+          display: flex;
           width: 100%;
-        }
+          
+          .main-form__txit {
+            width: 100%;
+            padding: 0 40px 0 10px;
+            border-style: none;
+          }
 
-        .input-box__image {
-          font-size: 1.3rem;
-          position: absolute;
-          right: 10px;
-          color: black;
+          .input-box {
+            font-size: 1.3rem;
+            position: absolute;
+            right: 170px;
 
-          &__file {
-            display: none;
+            &__image {
+              color: black;
+  
+              &__file {
+                display: none;
+              }
+            }
           }
         }
       }
 
-      &__send {
+      .submit__btn {
         padding: 0 30px;
         margin-left: 15px;
+        height: 50px;
         width: 100px;
         color: #ffffff;
         background-color: #38aef0;

@@ -1,12 +1,15 @@
 .chat-main
   .mein-header
     .mein-header__left
-      test
+      = @group.name
       .mein-header__left__group
-        menber: name
-    = link_to "#",class: "mein-header__edit-btn" do
+        Member :
+        - @group.users.each do |user|
+          = user.name
+    = link_to edit_group_path(@group),class: "mein-header__edit-btn" do
       Edit
   .message
+    = render @messages
     .main-message
       .main-message__data
         .main-message__data__user
@@ -15,13 +18,12 @@
           2020/03/27(Fri) 23:16:04
       .main-message__txit
         おはよう
-  .main-form
-    .main-form__box
-      .main-form__box__txit
-        type a message
-      %label{class: "input-box__image"}
-        = icon('far', 'image')
-        %input{type: "file", class: "input-box__image__file"}
-
-    .main-form__send
-      Send
+  .form
+    .main-form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'main-form__txit', placeholder: 'type a message'
+        .input-box
+          = f.label :image, class: 'input-box__image' do
+            = icon('far', 'image', class: 'icon')
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class: 'submit__btn'
