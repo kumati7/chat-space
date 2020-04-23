@@ -10,14 +10,14 @@
       Edit
   .message
     = render @messages
-    .main-message
-      .main-message__data
-        .main-message__data__user
-          masa
-        .main-message__data__info 
-          2020/03/27(Fri) 23:16:04
-      .main-message__txit
-        おはよう
+    -# .main-message
+    -#   .main-message__data
+    -#     .main-message__data__user
+    -#       masa
+    -#     .main-message__data__info 
+    -#       2020/03/27(Fri) 23:16:04
+    -#   .main-message__txit
+    -#     おはよう
   .form
     .main-form
       = form_for [@group, @message] do |f|
