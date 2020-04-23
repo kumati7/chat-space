@@ -105,28 +105,29 @@
       background-color: #fafafa;
       border-top: 1px solid #eeeeee;
       padding: 46px 40px;
+      overflow: auto;
 
-      .main-message {
+      .message__box {
         padding-bottom: 46px;
-
-        &__data {
+        
+        .upper-message {
           display: flex;
+          margin-bottom: 10px;
 
-          &__user  {
-            margin-bottom: 12px;
+          &__user-name {
             font-size: 16px;
             color: #333333;
             font-weight: bold;
           }
 
-          &__info {
+          .upper-message__date {
             margin-left: 10px;
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
           }
         }
-        &__txit {
+        .lower-message {
           font-size: 14px;
           color: #434A54;
           margin-bottom: 10px;
