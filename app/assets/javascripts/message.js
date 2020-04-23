@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       var html =
-       `<div class="message">
+       `<div class="message__box">
           <div class="upper-message">
             <div class="upper-message__user-name">
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       var html =
-       `<div class="message">
+       `<div class="message__box">
           <div class="upper-message">
             <div class="upper-message__user-name">
               ${message.user_name}
@@ -53,9 +53,16 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages').append(html);
+      $('.message').append(html);
       $('form')[0].reset();
+      $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
     })
+    .fail(function(){
+      alert("fail");
+    })
+    .always(function(){
+      $(".submit__btn").prop("disabled", false);
+    });
   })
-  $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+  
 });
