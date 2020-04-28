@@ -11,7 +11,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, 'ruby 2.5.1' 
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/wheyprotein_pem.pem'] 
+                  keys: ['~/.ssh/wheyprotein.pem'] 
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
