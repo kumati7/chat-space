@@ -50,6 +50,10 @@
         width: 100%;
         padding-bottom: 40px;
 
+        a {
+          text-decoration: none;
+        }
+
         &__name {
           width: 100%;
           font-size: 15px;
